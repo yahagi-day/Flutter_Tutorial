@@ -16,7 +16,7 @@ jobs:
     name : Run the ios Build
     runs-on: macos-latest-xlarge
     steps:
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{secrets.SUBMODULE_TOKEN}}
