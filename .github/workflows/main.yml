@@ -14,14 +14,13 @@ concurrency:
 jobs:
   ios-Build:
     name : Run the ios Build
-    runs-on: macos-latest-xlarge
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{secrets.SUBMODULE_TOKEN}}
           submodules: true
-      - name: setup-cocoapods
       - uses: maxim-lobanov/setup-cocoapods@v1
         with:
           version: latest
