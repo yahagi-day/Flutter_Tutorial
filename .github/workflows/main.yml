@@ -30,11 +30,11 @@ jobs:
         run: |
           flutter pub get
           flutter clean
+          cd ios
           pod install
           flutter build ios
       - name : Add and commit files
         run: |
-          cd ios
           git add .
           git config --local user.email "action@github.com"
           git config --local user.name "Github Action"
