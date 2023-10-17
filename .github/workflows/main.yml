@@ -21,6 +21,10 @@ jobs:
           fetch-depth: 0
           token: ${{secrets.SUBMODULE_TOKEN}}
           submodules: true
+      - name: setup-cocoapods
+      - uses: maxim-lobanov/setup-cocoapods@v1
+        with:
+          version: latest
       - uses: subosito/flutter-action@v2.3.0
         with:
           flutter-version: '3.13.7'
