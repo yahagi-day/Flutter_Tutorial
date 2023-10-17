@@ -4,10 +4,13 @@ import 'package:flutter/rendering.dart';
 
 void main() {
   debugPaintSizeEnabled = false;
-  runApp(MaterialApp(home: MyHomeWidget()));
+  runApp(const MaterialApp(home: MyHomeWidget()));
 }
 
 class MyHomeWidget extends StatefulWidget {
+  const MyHomeWidget({super.key});
+
+  @override
   _MyHomeState createState() {
     return _MyHomeState();
   }
@@ -16,23 +19,24 @@ class MyHomeWidget extends StatefulWidget {
 class _MyHomeState extends State<MyHomeWidget> {
   String _title = "Hello Flutter";
 
+  @override
   Widget build(BuildContext context) {
     return Container(
         child: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text(_title, style: TextStyle(color: Colors.blue)),
+          Text(_title, style: const TextStyle(color: Colors.blue)),
           ElevatedButton(
               onPressed: () {
                 setState(() {
                   _title = "Button Pressed";
                 });
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return NextPage();
+                  return const NextPage();
                 }));
               },
-              child: Icon(Icons.favorite))
+              child: const Icon(Icons.favorite))
         ],
       ),
     ));
