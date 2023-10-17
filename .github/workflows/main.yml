@@ -29,12 +29,6 @@ jobs:
       - name: Install packages
         run: |
           flutter pub get
-          ls
-          pwd
-          cd ios
-          ls
-          pwd
-          pod install
           flutter build ios
       - name : Add and commit files
         run: |
