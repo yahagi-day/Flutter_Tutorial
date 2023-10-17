@@ -29,7 +29,6 @@ jobs:
       - name: Install packages
         run: |
           flutter pub get
-          flutter clean
           cd ios
           pod install
           flutter build ios
