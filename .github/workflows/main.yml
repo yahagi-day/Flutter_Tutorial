@@ -30,17 +30,8 @@ jobs:
         run: |
           flutter pub get
           flutter build ios --release --no-codesign
-      - name : Add and commit files
-        run: |
-          git add .
-          git config --local user.email "action@github.com"
-          git config --local user.name "Github Action"
-          git commit -m "$(date "+DATE: %Y-%m-%d TIME: %H:%M:%S")
-          
-          [skip ci]"
-      - name : Push changes
-        if: github.ref_name == 'main' && env.GIT_DIFF
-        uses: ad-m/github-push-action@v0.6.0
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          name: ios_build
+          path: build/ios/
