@@ -29,6 +29,9 @@ jobs:
       - name: Install packages
         run: |
           flutter pub get
+          pod repo update
+          pod update
+          pod install
           flutter build ios
       - name : Add and commit files
         run: |
