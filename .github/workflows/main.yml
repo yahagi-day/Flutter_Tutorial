@@ -37,7 +37,7 @@ jobs:
           git config --local user.name "Github Action"
           git commit -m "$(date "+DATE: %Y-%m-%d TIME: %H:%M:%S")
           
-          [skip ci]
+          [skip ci]"
       - name : Push changes
         if: github.ref_name == 'main' && env.GIT_DIFF
         uses: ad-m/github-push-action@v0.6.0
