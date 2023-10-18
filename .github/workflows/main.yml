@@ -29,10 +29,7 @@ jobs:
       - name: Install packages
         run: |
           flutter pub get
-          pod repo update
-          pod update
-          pod install
-          flutter build ios
+          flutter build ios --release --no-codesign
       - name : Add and commit files
         run: |
           git add .
