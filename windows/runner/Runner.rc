@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.stella" "\0"
-            VALUE "FileDescription", "dhu" "\0"
+            VALUE "CompanyName", "com.stella.dhu" "\0"
+            VALUE "FileDescription", "flutter_tutorial" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "dhu" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.stella. All rights reserved." "\0"
-            VALUE "OriginalFilename", "dhu.exe" "\0"
-            VALUE "ProductName", "dhu" "\0"
+            VALUE "InternalName", "flutter_tutorial" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.stella.dhu. All rights reserved." "\0"
+            VALUE "OriginalFilename", "flutter_tutorial.exe" "\0"
+            VALUE "ProductName", "flutter_tutorial" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

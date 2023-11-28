@@ -1,4 +1,4 @@
-package com.stella.dhu
+package com.stella.dhu.flutter_tutorial
 
 import io.flutter.embedding.android.FlutterActivity
 
